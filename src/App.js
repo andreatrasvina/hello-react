@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Title from './Title';
+import InputField from './InputField';
+import Checkbox from './Checkbox';
+import Button from './Button';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Title title="Nuevo Usuario" />
+      <InputField label="Usuario" />
+      <InputField label="Correo" type="email" />
+      <InputField label="Contraseña" type="password" />
+      <Checkbox label="Aceptar términos y condiciones" />
+      <Button label="Cancelar" />
+      <Button label="Aceptar" />
     </div>
   );
 }
